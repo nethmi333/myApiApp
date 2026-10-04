@@ -1,4 +1,4 @@
-test_that("get_nobel_laureates returns expected data structure", {
+test_that("get_nobel_laureates returns correct structure", {
   res <- get_nobel_laureates(category = "che", year = "2020")
 
   expect_s3_class(res, "data.frame")
