@@ -45,7 +45,7 @@ server <- function(input, output, session) {
     df <- laureate_data()
     if (nrow(df) == 0) return(NULL)
 
-    ggplot(df, aes(x = Gender, fill = Gender)) +
+    ggplot(df, aes(x = .data$Gender, fill = .data$Gender)) +
       geom_bar() +
       theme_minimal() +
       labs(title = "Laureate Count by Gender", y = "Count", x = "Gender") +
